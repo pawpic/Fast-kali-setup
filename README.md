@@ -1,2 +1,2 @@
 # Fast-kali-setup
-Are you tired of manualy cloneing repos with most importatnt tools for your kali?
+This script will clone the most important red team/penetration testing repos for CTF/Labs.
