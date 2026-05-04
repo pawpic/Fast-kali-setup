@@ -8,3 +8,4 @@ if [ "$(stat -c '%U' "$1")" == "$USER" ] || [ "$USER" == "root" ]; then
     git clone -q https://github.com/urbanadventurer/username-anarchy "$1/username-anarchy"
     # Add more repositories as needed
     echo "done"
+fi
