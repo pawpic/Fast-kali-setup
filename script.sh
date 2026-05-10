@@ -10,5 +10,8 @@ if [ "$(stat -c '%U' "$1")" == "$USER" ] || [ "$USER" == "root" ]; then
     git clone -q https://github.com/RedSiege/EyeWitness "$1/eyewitness"
     git clone -q https://github.com/samratashok/nishang "$1/nishang"
     git clone -q https://github.com/arthaud/git-dumper "$1/git-dumper"
-    # Add more repositories in next commits
+    git clone -q https://github.com/ropnop/kerbrute "$1/kerbrute"
+    # Installing dev version of kerbrute
+    cd "$1/kerbrute"
+    make linux
 fi
