@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #checking if user is owner of the directory and is root
-if [ "$(stat -c '%U' "$1")" == "$USER" ] && [ "$USER" == "root" ]; then
+if [ "$(stat -c '%U' "$1")" == "$USER" ] || [ "$USER" == "root" ]; then
     echo "User is root. Cloning repositories..."
     # Clone the repositories here
     echo "Cloning Sharp collections"
