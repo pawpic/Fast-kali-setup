@@ -18,8 +18,9 @@ if [ "$(stat -c '%U' "$1")" == "$USER" ] || [ "$USER" == "root" ]; then
     git clone -q https://github.com/arthaud/git-dumper "$1/git-dumper"
     echo "Cloning Kerbrute"
     git clone -q https://github.com/ropnop/kerbrute "$1/kerbrute"
-    echo "Installing go-lang and dev version of kerbrute. Also krb5-user"
-    apt install golang krb5-user -y 2>/dev/null
+    echo "Installing go-lang krb5-user cargo for rusthound-ce and dev version of kerbrute."
+    apt install golang krb5-user cargo bloodhound -y 2>/dev/null
     cd "$1/kerbrute"
     make linux
+    cargo install rusthound-ce
 fi
