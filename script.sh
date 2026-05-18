@@ -19,7 +19,7 @@ if [ "$(stat -c '%U' "$1")" == "$USER" ] || [ "$USER" == "root" ]; then
     echo "Cloning Kerbrute"
     git clone -q https://github.com/ropnop/kerbrute "$1/kerbrute"
     echo "Installing go-lang and dev version of kerbrute. Also krb5-user"
-    apt install golang krb5-user 2>/dev/null
+    apt install golang krb5-user -y 2>/dev/null
     cd "$1/kerbrute"
     make linux
 fi
